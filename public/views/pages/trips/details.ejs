@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../../partials/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include ../../partials/header %>
+    </header>
+
+    <main>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h3 class="card-title"><%= model.title%></h3>
+                <h4 class="card-subtitle mb-2 text-muted">  <%= model.startCity %> - <%= model.endCity %></h4>
+                <p class="card-text">  <%= model.description %></p>
+                <p class="card-text">  <%= model.price %></p>
+                <p class="card-text">  <%= model.date %></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>
+</body>
+
+</html>

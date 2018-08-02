@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../../partials/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include ../../partials/header %>
+    </header>
+
+    <main>
+        <h3>
+            <%= model.title%>
+        </h3>
+        <form action="/api/trips" method="POST">
+            <input type="hidden" class="form-control" id="startCity" value="<%= model.id %>" name="id">
+
+            <div class="form-group">
+                <label for="startCity">Start city</label>
+                <input type="text" class="form-control" name="startCity" placeholder="Enter start city" value="<%= model.startCity %>">
+            </div>
+            <div class="form-group">
+                <label for="endCity">End city</label>
+                <input type="text" class="form-control" name="endCity" placeholder="Enter end city" value="<%= model.endCity %>">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Trip date</label>
+                <input type="text" class="form-control" name="date" placeholder="Trip date" value="<%= model.date %>">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Trip cost</label>
+                <input type="text" class="form-control" name="price" placeholder="Trip price" value="<%= model.price %>">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea 
+                    type="text" 
+                    class="form-control" 
+                    name="description" 
+                    placeholder="Description" 
+                 value="<%= model.description %>"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </main>
+
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>
+</body>
+
+</html>

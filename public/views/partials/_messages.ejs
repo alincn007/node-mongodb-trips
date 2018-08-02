@@ -1,0 +1,11 @@
+<div id="messages">
+    <% Object.keys(messages).forEach(function (type) { %>
+        <ul class="list-group">
+            <% messages[type].forEach(function (message) { %>
+                <li class="list-group-item list-group-item-<%= type %>">
+                    <%= message %>
+                </li>
+            <% }) %>
+        </ul>
+    <% }) %>
+</div>

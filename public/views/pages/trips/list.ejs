@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../../partials/header %>
+    </header>
+
+    <main>
+        <h3>All my trips</h3>
+        <ul class="list-group">
+            <% trips.forEach((t) => { %>
+                <li class="list-group-item">
+                    <a href="/api/trips/<%= t.id%>">
+                        <%= t.startCity %> - <%= t.endCity %> (<%= t.price %>)</a>
+
+                    <div >
+                        <a class="btn btn-xs btn-info" href="/api/trips/<%=t.id%>/edit">Edit</a>
+                        <a class="btn btn-xs btn-danger" href="/api/trips/<%=t.id%>/delete">Delete</a>
+                    </div>
+                </li>
+                <% })%>
+        </ul>
+    </main>
+
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>
+
+</body>
+
+</html>
