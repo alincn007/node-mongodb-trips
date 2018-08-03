@@ -17,10 +17,10 @@
     "express": "^4.16.3",
     "express-messages": "^1.0.1",
     "express-session": "^1.15.6",
+    "growl": "~>1.10.0",
     "mongoose": "^5.2.5",
     "node-notifier": "^5.2.1",
-    "path": "^0.12.7",
-    "swagger": "^0.7.5"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
